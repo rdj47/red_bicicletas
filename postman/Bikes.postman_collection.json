@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "8b14e7ab-6a30-4034-8cee-bfc5d5acad3b",
+		"name": "Bikes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createBike",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"color\": \"blue\",\r\n    \"model\": \"ford\",\r\n    \"lat\": -34.59576626007367,\r\n    \"lng\": -58.39107068477774\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/bikes/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"bikes",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "queryBikes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/bikes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"bikes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBike",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"color\": \"red\",\r\n    \"model\": \"toyota\",\r\n    \"lat\": -34.59576626007367,\r\n    \"lng\": -58.39107068477774\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/bikes/update?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"bikes",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBike",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/bikes/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"bikes",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
